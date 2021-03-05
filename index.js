@@ -8,14 +8,12 @@ const faqQuestion = [
 
 window.onload = function(){  
   const faqComponent = document.getElementById('faq');
-  const list = faqQuestion.forEach(element => {
-    console.log(element);
+  faqQuestion.forEach(element => {
     faqComponent.append(createAccordion(element));
     const hrComponent = document.createElement('hr');
     hrComponent.classList = 'divider';
     faqComponent.append(hrComponent);
   });
-  console.log(list);
 }  
 
 const createAccordion = (element) => { 
